@@ -33,9 +33,10 @@ export default function Dashboard() {
     try {
       const data = await socialApiService.getAccountData(platform, usernames[platform]);
       setAccounts(prev => ({ ...prev, [platform]: data }));
-    } catch (error) {
+    } catch (error: any) {
       console.error(`Error fetching ${platform} data:`, error);
-      alert(`Could not find ${platform} account: ${usernames[platform]}`);
+      // Soft error alert for modern AJAX feel
+      alert(`${platform.toUpperCase()} Error: ${error.message || 'Account not found'}`);
     } finally {
       setLoading(prev => ({ ...prev, [platform]: false }));
     }

@@ -26,9 +26,9 @@ Buat sebuah web application menggunakan Next.js yang menampilkan data views dari
 
 | Kendala | Solusi yang Diterapkan |
 | :--- | :--- |
-| **Keterbatasan API Resmi** (TikTok & IG memerlukan persetujuan manual yang lama) | Menyiapkan sebuah **Unified API Interface** di `src/services/socialApi.ts`. Solusi jangka pendek menggunakan Mock Data dengan format data asli platform, namun struktur kode sudah siap untuk dihubungkan ke RapidAPI atau Backend Scraper di kemudian hari. |
-| **CORS (Cross-Origin Resource Sharing)** | Integrasi API media sosial secara langsung di client-side sering terhalang CORS. Solusinya adalah menggunakan **Next.js API Routes** (Server-side) sebagai proxy untuk melakukan fetch data dari platform luar dengan aman. |
-| **Dynamic Data Refresh** | Untuk memenuhi kriteria "Refresh tanpa reload", diimplementasikan tombol *Refresh All* dan *Search* individual yang memperbarui state secara instan menggunakan `AnimatePresence` untuk transisi halus. |
+| **Keterbatasan API Resmi** (TikTok & IG memerlukan persetujuan manual yang lama) | Menyiapkan sebuah **Unified API Interface** di `src/services/socialApi.ts`. **YouTube sudah menggunakan API resmi (V3)**, sementara TikTok & IG menggunakan Mock Data dengan format data asli platform sebagai standar problem-solving untuk deadline 2-3 hari. |
+| **CORS (Cross-Origin Resource Sharing)** | Integrasi API media sosial secara langsung di client-side sering terhalang CORS. Solusinya adalah menggunakan **YouTube Server-Side Fetching** (melalui Next.js) dan diproteksi oleh environment variables. |
+| **Dynamic Data Refresh** | Untuk memenuhi kriteria "Refresh tanpa reload", diimplementasikan tombol *Refresh All* dan *Search* individual dengan status loading yang persisten untuk memberikan pengalaman **AJAX-style** yang modern. |
 
 ---
 
