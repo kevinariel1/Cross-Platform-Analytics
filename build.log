@@ -1,0 +1,1030 @@
+﻿
+> view-tracker@0.1.0 build
+> next build
+
+npm : ΓÜá Warning: Next.js inferred your 
+workspace root, but it may not be correct.
+At line:1 char:1
++ npm run build 2>&1 | Out-File -FilePath 
+build.log -Encoding utf8; Get ...
++ ~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecifie 
+   d: (ΓÜá Warning: Ne...not be correct.  
+  :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeComma 
+   ndError
+ 
+ We detected multiple lockfiles and 
+selected the directory of 
+C:\Users\ACER\package-lock.json as the 
+root directory.
+ To silence this warning, set 
+`turbopack.root` in your Next.js config, 
+or consider removing one of the lockfiles 
+if it's not needed.
+   See https://nextjs.org/docs/app/api-ref
+erence/config/next-config-js/turbopack#roo
+t-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\ACER\Dropbox\PC\Documents\Po
+rtofolio\Cross-Platform View 
+Tracker\package-lock.json
+
+Γû▓ Next.js 16.2.2 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 8 
+errors:
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/animation/interfaces/motion-v
+alue.mjs:1:1
+Export GroupPlaybackControls doesn't 
+exist in target module
+[31m[1m>[0m [90m1 |[0m 
+[36mimport[0m { getValueTransition, 
+[33mGroupPlaybackControls[0m } 
+[36mfrom[0m [32m'motion-dom'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { 
+secondsToMilliseconds } [36mfrom[0m 
+[32m'motion-utils'[0m;
+  [90m3 |[0m [36mimport[0m { frame } 
+[36mfrom[0m 
+[32m'../../frameloop/frame.mjs'[0m;
+  [90m4 |[0m [36mimport[0m { 
+[33mMotionGlobalConfig[0m } 
+[36mfrom[0m 
+[32m'../../utils/GlobalConfig.mjs'[0m;
+
+The export GroupPlaybackControls was not 
+found in module [project]/Dropbox/PC/Docum
+ents/Portofolio/Cross-Platform View Tracke
+r/node_modules/motion-dom/dist/es/index.mj
+s [app-client] (ecmascript).
+Did you mean to import copyBoxInto?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/animation/interfaces/motion-v
+alue.mjs:1:1
+Export GroupPlaybackControls doesn't 
+exist in target module
+[31m[1m>[0m [90m1 |[0m 
+[36mimport[0m { getValueTransition, 
+[33mGroupPlaybackControls[0m } 
+[36mfrom[0m [32m'motion-dom'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { 
+secondsToMilliseconds } [36mfrom[0m 
+[32m'motion-utils'[0m;
+  [90m3 |[0m [36mimport[0m { frame } 
+[36mfrom[0m 
+[32m'../../frameloop/frame.mjs'[0m;
+  [90m4 |[0m [36mimport[0m { 
+[33mMotionGlobalConfig[0m } 
+[36mfrom[0m 
+[32m'../../utils/GlobalConfig.mjs'[0m;
+
+The export GroupPlaybackControls was not 
+found in module [project]/Dropbox/PC/Docum
+ents/Portofolio/Cross-Platform View Tracke
+r/node_modules/motion-dom/dist/es/index.mj
+s [app-ssr] (ecmascript).
+Did you mean to import copyBoxInto?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/animation/animators/Accelerat
+edAnimation.mjs:1:1
+Export attachTimeline doesn't exist in 
+target module
+[31m[1m>[0m [90m1 |[0m ...{ 
+supportsLinearEasing, attachTimeline, 
+isGenerator, isWaapiSupportedEasing } 
+[36mfrom[0m [32m'moti...[0m
+  [90m  |[0m    [31m[1m^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m ...{ 
+millisecondsToSeconds, 
+secondsToMilliseconds, noop } 
+[36mfrom[0m [32m'motion-utils'[0m;
+  [90m3 |[0m ...{ anticipate } 
+[36mfrom[0m 
+[32m'../../easing/anticipate.mjs'[0m;
+  [90m4 |[0m ...{ backInOut } 
+[36mfrom[0m 
+[32m'../../easing/back.mjs'[0m;
+
+The export attachTimeline was not found 
+in module [project]/Dropbox/PC/Documents/P
+ortofolio/Cross-Platform View Tracker/node
+_modules/motion-dom/dist/es/index.mjs 
+[app-client] (ecmascript).
+Did you mean to import time?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/Accel
+eratedAnimation.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/Accel
+eratedAnimation.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/animation/animators/Accelerat
+edAnimation.mjs:1:1
+Export attachTimeline doesn't exist in 
+target module
+[31m[1m>[0m [90m1 |[0m ...{ 
+supportsLinearEasing, attachTimeline, 
+isGenerator, isWaapiSupportedEasing } 
+[36mfrom[0m [32m'moti...[0m
+  [90m  |[0m    [31m[1m^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m ...{ 
+millisecondsToSeconds, 
+secondsToMilliseconds, noop } 
+[36mfrom[0m [32m'motion-utils'[0m;
+  [90m3 |[0m ...{ anticipate } 
+[36mfrom[0m 
+[32m'../../easing/anticipate.mjs'[0m;
+  [90m4 |[0m ...{ backInOut } 
+[36mfrom[0m 
+[32m'../../easing/back.mjs'[0m;
+
+The export attachTimeline was not found 
+in module [project]/Dropbox/PC/Documents/P
+ortofolio/Cross-Platform View Tracker/node
+_modules/motion-dom/dist/es/index.mjs 
+[app-ssr] (ecmascript).
+Did you mean to import time?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/Accel
+eratedAnimation.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/Accel
+eratedAnimation.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/gestures/pan/PanSession.mjs:1
+:1
+Export capturePointer doesn't exist in 
+target module
+[31m[1m>[0m [90m1 |[0m 
+[36mimport[0m { capturePointer, 
+isPrimaryPointer } [36mfrom[0m 
+[32m'motion-dom'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^[0m
+  [90m2 |[0m [36mimport[0m { 
+secondsToMilliseconds, 
+millisecondsToSeconds } [36mfrom[0m 
+[32m'motion-utils'[0m;
+  [90m3 |[0m [36mimport[0m { 
+addPointerEvent } [36mfrom[0m [32m'../.
+./events/add-pointer-event.mjs'[0m;
+  [90m4 |[0m [36mimport[0m { 
+extractEventInfo } [36mfrom[0m 
+[32m'../../events/event-info.mjs'[0m;
+
+The export capturePointer was not found 
+in module [project]/Dropbox/PC/Documents/P
+ortofolio/Cross-Platform View Tracker/node
+_modules/motion-dom/dist/es/index.mjs 
+[app-client] (ecmascript).
+Did you mean to import 
+createProjectionNode?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/PanSession.m
+js [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/index.mjs 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/drag.mjs 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/PanSession.m
+js [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/index.mjs 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/drag.mjs 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/gestures/pan/PanSession.mjs:1
+:1
+Export capturePointer doesn't exist in 
+target module
+[31m[1m>[0m [90m1 |[0m 
+[36mimport[0m { capturePointer, 
+isPrimaryPointer } [36mfrom[0m 
+[32m'motion-dom'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^[0m
+  [90m2 |[0m [36mimport[0m { 
+secondsToMilliseconds, 
+millisecondsToSeconds } [36mfrom[0m 
+[32m'motion-utils'[0m;
+  [90m3 |[0m [36mimport[0m { 
+addPointerEvent } [36mfrom[0m [32m'../.
+./events/add-pointer-event.mjs'[0m;
+  [90m4 |[0m [36mimport[0m { 
+extractEventInfo } [36mfrom[0m 
+[32m'../../events/event-info.mjs'[0m;
+
+The export capturePointer was not found 
+in module [project]/Dropbox/PC/Documents/P
+ortofolio/Cross-Platform View Tracker/node
+_modules/motion-dom/dist/es/index.mjs 
+[app-ssr] (ecmascript).
+Did you mean to import 
+createProjectionNode?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/PanSession.m
+js [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/index.mjs 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/drag.mjs 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/PanSession.m
+js [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/gestures/pan/index.mjs 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/drag.mjs 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/easing/utils/map.mjs:1:1
+Export isBezierDefinition doesn't exist 
+in target module
+[31m[1m>[0m [90m1 |[0m 
+[36mimport[0m { isBezierDefinition } 
+[36mfrom[0m [32m'motion-dom'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { 
+invariant, noop } [36mfrom[0m 
+[32m'motion-utils'[0m;
+  [90m3 |[0m [36mimport[0m { 
+anticipate } [36mfrom[0m 
+[32m'../anticipate.mjs'[0m;
+  [90m4 |[0m [36mimport[0m { backIn, 
+backInOut, backOut } [36mfrom[0m 
+[32m'../back.mjs'[0m;
+
+The export isBezierDefinition was not 
+found in module [project]/Dropbox/PC/Docum
+ents/Portofolio/Cross-Platform View Tracke
+r/node_modules/motion-dom/dist/es/index.mj
+s [app-client] (ecmascript).
+Did you mean to import 
+setFeatureDefinitions?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/easing/utils/map.mjs 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/generators/keyf
+rames.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/MainT
+hreadAnimation.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/easing/utils/map.mjs 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/generators/keyf
+rames.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/MainT
+hreadAnimation.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+./Dropbox/PC/Documents/Portofolio/Cross-Pl
+atform View Tracker/node_modules/framer-mo
+tion/dist/es/easing/utils/map.mjs:1:1
+Export isBezierDefinition doesn't exist 
+in target module
+[31m[1m>[0m [90m1 |[0m 
+[36mimport[0m { isBezierDefinition } 
+[36mfrom[0m [32m'motion-dom'[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m2 |[0m [36mimport[0m { 
+invariant, noop } [36mfrom[0m 
+[32m'motion-utils'[0m;
+  [90m3 |[0m [36mimport[0m { 
+anticipate } [36mfrom[0m 
+[32m'../anticipate.mjs'[0m;
+  [90m4 |[0m [36mimport[0m { backIn, 
+backInOut, backOut } [36mfrom[0m 
+[32m'../back.mjs'[0m;
+
+The export isBezierDefinition was not 
+found in module [project]/Dropbox/PC/Docum
+ents/Portofolio/Cross-Platform View Tracke
+r/node_modules/motion-dom/dist/es/index.mj
+s [app-ssr] (ecmascript).
+Did you mean to import 
+setFeatureDefinitions?
+All exports of the module are statically 
+known (It doesn't have dynamic exports). 
+So it's known statically that the 
+requested export doesn't exist.
+
+Import traces:
+  Client Component Browser:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/easing/utils/map.mjs 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/generators/keyf
+rames.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/MainT
+hreadAnimation.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component 
+Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component Browser]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+  Client Component SSR:
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/easing/utils/map.mjs 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/generators/keyf
+rames.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animators/MainT
+hreadAnimation.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/interfaces/moti
+on-value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/animation/animate/single-
+value.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/create-pr
+ojection-node.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/projection/node/HTMLProje
+ctionNode.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/motion/features/layout.mj
+s [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+create.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/node_modules/frame
+r-motion/dist/es/render/components/motion/
+proxy.mjs [Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Client Component SSR]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View 
+Tracker/src/components/Dashboard.tsx 
+[Server Component]
+    ./Dropbox/PC/Documents/Portofolio/Cros
+s-Platform View Tracker/src/app/page.tsx 
+[Server Component]
+
+
+    at ignore-listed frames
