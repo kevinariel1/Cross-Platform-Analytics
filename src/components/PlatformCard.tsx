@@ -109,6 +109,9 @@ const PlatformCard = React.memo(function PlatformCard({ account, isLoading }: Pl
           gap: 1.5rem;
           transition: var(--transition-smooth);
           position: relative;
+          width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
         }
 
         .platform-card:hover {
@@ -141,9 +144,17 @@ const PlatformCard = React.memo(function PlatformCard({ account, isLoading }: Pl
           border: 2px solid var(--bg-accent);
         }
 
+        .user-info {
+          flex: 1;
+          min-width: 0;
+        }
+
         .user-info h3 {
           font-size: 1.1rem;
           margin: 0;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .platform-tag {
@@ -168,6 +179,7 @@ const PlatformCard = React.memo(function PlatformCard({ account, isLoading }: Pl
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 1rem;
+          width: 100%;
         }
 
         .stat-box {

@@ -18,13 +18,13 @@
   --tiktok-cyan: #00f2ea;
   --tiktok-red: #ff0050;
   
-  --glass-bg: rgba(255, 255, 255, 0.03);
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.12);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  --glass-hover: rgba(255, 255, 255, 0.08);
+  --glass-hover: rgba(255, 255, 255, 0.10);
 
-  --item-bg: rgba(255, 255, 255, 0.03);
-  --item-hover: rgba(255, 255, 255, 0.06);
+  --item-bg: rgba(255, 255, 255, 0.04);
+  --item-hover: rgba(255, 255, 255, 0.08);
 
   --btn-text: #ffffff;
   

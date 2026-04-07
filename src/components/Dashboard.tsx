@@ -81,40 +81,41 @@ export default function Dashboard() {
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
-            Change Theme
+            <span style={{ opacity: 0.25 }}>{theme.charAt(0).toUpperCase() + theme.slice(1)}</span>
           </button>
-          
         </div>
       </header>
 
-      <div className="input-grid">
-        {(['tiktok', 'instagram', 'youtube'] as const).map((platform) => (
-          <div key={platform} className="input-group glass">
-            <div className="input-icon">
-              {platform === 'tiktok' && <Video size={18} className="icon-tiktok" />}
-              {platform === 'instagram' && <Instagram size={18} className="icon-ig" />}
-              {platform === 'youtube' && <Youtube size={18} className="icon-yt" />}
+      <div className="input-section glass">
+        <div className="input-grid">
+          {(['tiktok', 'instagram', 'youtube'] as const).map((platform) => (
+            <div key={platform} className="input-group glass">
+              <div className="input-icon">
+                {platform === 'tiktok' && <Video size={18} className="icon-tiktok" />}
+                {platform === 'instagram' && <Instagram size={18} className="icon-ig" />}
+                {platform === 'youtube' && <Youtube size={18} className="icon-yt" />}
+              </div>
+              <input 
+                type="text" 
+                placeholder={`${platform.charAt(0).toUpperCase() + platform.slice(1)} handle...`}
+                value={usernames[platform]}
+                onChange={(e) => setUsernames(prev => ({ ...prev, [platform]: e.target.value }))}
+                onKeyDown={(e) => e.key === 'Enter' && fetchPlatformData(platform)}
+              />
+              <button 
+                className="search-btn"
+                onClick={() => fetchPlatformData(platform)}
+                disabled={loading[platform]}
+              >
+                {loading[platform] ? <RefreshCw className="spin" size={16} /> : <Search size={16} />}
+              </button>
             </div>
-            <input 
-              type="text" 
-              placeholder={`${platform.charAt(0).toUpperCase() + platform.slice(1)} handle...`}
-              value={usernames[platform]}
-              onChange={(e) => setUsernames(prev => ({ ...prev, [platform]: e.target.value }))}
-              onKeyDown={(e) => e.key === 'Enter' && fetchPlatformData(platform)}
-            />
-            <button 
-              className="search-btn"
-              onClick={() => fetchPlatformData(platform)}
-              disabled={loading[platform]}
-            >
-              {loading[platform] ? <RefreshCw className="spin" size={16} /> : <Search size={16} />}
-            </button>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
       <div className="cards-grid">
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           {(['tiktok', 'instagram', 'youtube'] as const).map((platform) => (
             accounts[platform] && (
               <motion.div
@@ -123,6 +124,7 @@ export default function Dashboard() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
+                style={{ minWidth: 0, width: '100%' }}
               >
                 <PlatformCard 
                   account={accounts[platform]!} 
@@ -143,12 +145,14 @@ export default function Dashboard() {
       <style jsx>{`
         .dashboard-container {
           max-width: 1200px;
+          width: 100%;
           margin: 0 auto;
           padding: 2rem 1rem;
           min-height: 100vh;
           display: flex;
           flex-direction: column;
           gap: 2rem;
+          box-sizing: border-box;
         }
 
         .dashboard-header {
@@ -179,7 +183,7 @@ export default function Dashboard() {
           color: var(--accent-blue);
         }
 
-        .refresh-btn, .theme-btn {
+        .theme-btn {
           display: flex;
           align-items: center;
           gap: 8px;
@@ -196,14 +200,15 @@ export default function Dashboard() {
           padding: 0.6rem;
         }
 
-        .refresh-btn:hover:not(:disabled), .theme-btn:hover {
+        .theme-btn:hover {
           background: var(--glass-hover);
           transform: translateY(-2px);
         }
 
-        .refresh-btn:disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
+        .input-section {
+          padding: 1.5rem;
+          display: flex;
+          flex-direction: column;
         }
 
         .input-grid {
@@ -287,7 +292,7 @@ export default function Dashboard() {
           
           .cards-grid {
             grid-template-columns: 1fr;
-            gap: 1rem;
+            gap: 1.5rem;
           }
 
           .dashboard-header {
@@ -298,9 +303,16 @@ export default function Dashboard() {
 
           .header-right {
             display: flex;
-            gap: 0.5rem;
             width: 100%;
             justify-content: center;
+          }
+
+          .dashboard-header {
+            padding: 1rem;
+          }
+
+          .input-section {
+            padding: 1rem;
           }
         }
       `}</style>
