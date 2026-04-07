@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+  <img src="public/screenshot.png" alt="ViewTracker Dashboard" width="800"/>
+</p>
 
-## Getting Started
+<h1 align="center">ViewTracker</h1>
 
-First, run the development server:
+<p align="center">
+  <strong>Cross-platform social media analytics dashboard for real-time view tracking</strong>
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#tech-stack">Tech Stack</a> •
+  <a href="#project-structure">Project Structure</a> •
+  <a href="#license">License</a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Next.js-15-black?logo=next.js" alt="Next.js 15"/>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react" alt="React 19"/>
+  <img src="https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript" alt="TypeScript 5"/>
+  <img src="https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer" alt="Framer Motion"/>
+</p>
+
+---
+
+A sleek, responsive web application built to monitor and display social media views from multiple platforms in a single unified dashboard without needing to reload the page.
+
+## Features
+
+### 📱 Multi-Platform Tracking
+Monitor metrics across **YouTube**, **TikTok**, and **Instagram** simultaneously. Input usernames or channels and fetch real-time engagement data on a single screen.
+
+### ⚡ Dynamic AJAX Refresh
+Seamless data updates. Refresh all platforms at once or individually without ever reloading the browser page. Persistent loading states keep the experience smooth.
+
+### 🎨 Premium Dark Mode UI
+Built with a beautiful **Glassmorphism** design aesthetic inspired by modern SaaS dashboards, featuring micro-animations powered by Framer Motion.
+
+### 📊 Holistic Analytics View
+- **Total Views** — Combined metrics for overall account reach
+- **Average Views** — Quick math calculating average engagement per recent post
+- **Latest Content** — Displays thumbnails, view counts, and published dates for the 5 most recent posts on each platform
+
+## Quick Start
+
+### Prerequisites
+- Node.js 18+
+
+### 1. Clone and Configure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/kevinariel1/Cross-Platform-Analytics.git
+cd Cross-Platform-Analytics
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ensure you configure your environment variables. Create a `.env.local` file:
+```env
+NEXT_PUBLIC_YOUTUBE_API_KEY=your_youtube_api_key_here
+```
+*(Note: TikTok and Instagram use built-in intelligent mock data fallbacks to maintain compliance with commercial API limits).*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 2. Install and Run
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+The app will be available at `http://localhost:3000`
 
-To learn more about Next.js, take a look at the following resources:
+## Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Layer | Technology |
+|-------|------------|
+| **Framework** | Next.js 15 (App Router) |
+| **UI** | React 19, CSS (Glassmorphism) |
+| **Language** | TypeScript 5 |
+| **Icons** | Lucide React |
+| **Animations** | Framer Motion |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```text
+cross-platform-view-tracker/
+├── src/
+│   ├── app/           # Next.js App Router & API proxy routes
+│   ├── components/    # Reusable UI components (Dashboard, PlatformCard)
+│   ├── services/      # Unified API Interface (socialApi.ts)
+│   └── types/         # TypeScript interfaces
+├── public/            # Static assets
+└── SUBMISSION.md      # Additional technical details & approaches
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Setup & Fallback System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Due to API constraints on TikTok and Instagram (which require manual approval and are heavily restricted for commercial usage), this project utilizes a **Unified API Interface** (`src/services/socialApi.ts`). While YouTube fetches directly using the v3 Data API, TikTok and Instagram gracefully fallback to beautifully structured local mock data simulating a real API response, ensuring a resilient and complete UI demonstration at all times.
+
+## License
+
+This project is open-source and available under the MIT License.

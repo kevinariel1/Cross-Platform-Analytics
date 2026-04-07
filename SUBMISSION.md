@@ -47,5 +47,5 @@ Buat sebuah web application menggunakan Next.js yang menampilkan data views dari
 ---
 
 ### 🔗 Link
-- **Deployment**: [TBD - your-app-link.vercel.app](https://vercel.com)
-- **Repository**: [GitHub Repo](https://github.com/kevinariel1/CodingCamp-09Feb26-KevinYap)
+- **Deployment**: [Cross-Platform View Tracker](https://cross-platform-analytics.vercel.app/)
+- **Repository**: [GitHub Repo](https://github.com/kevinariel1/Cross-Platform-Analytics.git)
