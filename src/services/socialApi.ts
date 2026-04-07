@@ -84,11 +84,14 @@ export const socialApiService = {
 
       // 2. INSTAGRAM INTEGRATION
       if (platform === 'instagram') {
-        // NOTE TO BEGINNER: A completely free & legal public Instagram API doesn't exist anymore without user OAuth authentication.
-        // Usually, developers use RapidAPI's "Instagram Scraper" APIs (e.g. instagram-data1.p.rapidapi.com).
-        // Since you can't submit an illegal scraper for the final assignment, we simulate a failure here
-        // so it natively falls back to the beautiful mock data below without crashing.
-        throw new Error('Using fallback for Instagram due to API strictness.');
+        const res = await fetch(`/api/instagram?username=${cleanUsername}`);
+        const data = await res.json();
+        
+        if (!res.ok || data.error) {
+          throw new Error(data.error || 'Instagram API failed or key missing');
+        }
+        
+        return { ...data, lastRefreshed: new Date().toISOString() };
       }
 
       // 3. YOUTUBE INTEGRATION (Official Google API)

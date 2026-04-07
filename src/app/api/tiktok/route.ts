@@ -31,7 +31,14 @@ export async function GET(request: Request) {
       },
     });
 
-    const infoData = await infoRes.json();
+    const rawText = await infoRes.text();
+    let infoData;
+    try {
+      infoData = JSON.parse(rawText);
+    } catch (e) {
+      console.error('Received HTML instead of JSON from TikTok API proxy (RapidAPI might be blocked or requires subscription).');
+      return NextResponse.json({ error: 'RapidAPI returned an HTML error page' }, { status: 502 });
+    }
     
     // Handle RapidAPI errors early
     if (infoData.message && infoData.message.includes('not subscribed')) {
