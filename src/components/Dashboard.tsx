@@ -81,15 +81,9 @@ export default function Dashboard() {
             aria-label="Toggle theme"
           >
             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+            Change Theme
           </button>
-          <button 
-            className="refresh-btn glass" 
-            onClick={refreshAll}
-            disabled={Object.values(loading).some(l => l)}
-          >
-            <RefreshCw className={Object.values(loading).some(l => l) ? 'spin' : ''} size={18} />
-            Refresh All
-          </button>
+          
         </div>
       </header>
 
