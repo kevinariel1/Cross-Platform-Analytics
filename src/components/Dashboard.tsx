@@ -1,8 +1,8 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { RefreshCw, LayoutDashboard, Instagram, Youtube, Video, Search } from 'lucide-react';
+import { RefreshCw, LayoutDashboard, Instagram, Youtube, Video, Search, Sun, Moon } from 'lucide-react';
 import { SocialAccount } from '../types/social';
 import { socialApiService } from '../services/socialApi';
 import PlatformCard from './PlatformCard';
@@ -28,6 +28,19 @@ export default function Dashboard() {
     instagram: false,
     youtube: false
   });
+
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+    setTheme(currentTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+  };
 
   const fetchPlatformData = async (platform: 'tiktok' | 'instagram' | 'youtube') => {
     if (!usernames[platform]) return;
@@ -62,6 +75,13 @@ export default function Dashboard() {
         </div>
         
         <div className="header-right">
+          <button 
+            className="theme-btn glass" 
+            onClick={toggleTheme}
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <button 
             className="refresh-btn glass" 
             onClick={refreshAll}
@@ -165,21 +185,25 @@ export default function Dashboard() {
           color: var(--accent-blue);
         }
 
-        .refresh-btn {
+        .refresh-btn, .theme-btn {
           display: flex;
           align-items: center;
           gap: 8px;
           padding: 0.6rem 1.2rem;
           border: none;
-          color: #fff;
+          color: var(--btn-text);
           cursor: pointer;
           font-family: inherit;
           font-weight: 500;
           transition: var(--transition-smooth);
         }
 
-        .refresh-btn:hover:not(:disabled) {
-          background: rgba(255, 255, 255, 0.08);
+        .theme-btn {
+          padding: 0.6rem;
+        }
+
+        .refresh-btn:hover:not(:disabled), .theme-btn:hover {
+          background: var(--glass-hover);
           transform: translateY(-2px);
         }
 
@@ -205,7 +229,7 @@ export default function Dashboard() {
           flex: 1;
           background: transparent;
           border: none;
-          color: #fff;
+          color: var(--text-primary);
           padding: 0.5rem 0;
           font-size: 0.95rem;
           outline: none;
@@ -259,18 +283,30 @@ export default function Dashboard() {
         }
 
         @media (max-width: 768px) {
+          .dashboard-container {
+            padding: 1rem 0.5rem;
+          }
+          
           .input-grid {
             grid-template-columns: 1fr;
           }
           
           .cards-grid {
             grid-template-columns: 1fr;
+            gap: 1rem;
           }
 
           .dashboard-header {
             flex-direction: column;
             gap: 1rem;
             text-align: center;
+          }
+
+          .header-right {
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+            justify-content: center;
           }
         }
       `}</style>

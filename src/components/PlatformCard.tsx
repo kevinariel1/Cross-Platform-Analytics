@@ -213,12 +213,12 @@ const PlatformCard = React.memo(function PlatformCard({ account, isLoading }: Pl
           align-items: center;
           padding: 8px;
           border-radius: 10px;
-          background: rgba(255, 255, 255, 0.03);
+          background: var(--item-bg);
           transition: var(--transition-smooth);
         }
 
         .content-item:hover {
-          background: rgba(255, 255, 255, 0.06);
+          background: var(--item-hover);
         }
 
         .content-thumbnail {
