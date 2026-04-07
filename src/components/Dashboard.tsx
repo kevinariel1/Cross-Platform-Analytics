@@ -8,18 +8,21 @@ import { socialApiService } from '../services/socialApi';
 import PlatformCard from './PlatformCard';
 
 export default function Dashboard() {
+  // 1. STATE: Keep track of user inputs (handles)
   const [usernames, setUsernames] = useState({
     tiktok: '',
     instagram: '',
     youtube: ''
   });
   
+  // 2. STATE: Store the fetched API data for each platform
   const [accounts, setAccounts] = useState<{ [key: string]: SocialAccount | null }>({
     tiktok: null,
     instagram: null,
     youtube: null
   });
 
+  // 3. STATE: Track loading status for the UI spinners
   const [loading, setLoading] = useState<{ [key: string]: boolean }>({
     tiktok: false,
     instagram: false,

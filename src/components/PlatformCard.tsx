@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { SocialAccount } from '../types/social';
 import { Eye, Clock, TrendingUp, Instagram, Youtube, Video } from 'lucide-react';
 
@@ -8,7 +9,13 @@ interface PlatformCardProps {
   isLoading?: boolean;
 }
 
-export default function PlatformCard({ account, isLoading }: PlatformCardProps) {
+/**
+ * PlatformCard Component
+ * Wrapped in React.memo(): This is a performance best-practice. It tells React to 
+ * ONLY re-render this card if the 'account' or 'isLoading' props actually change.
+ * This makes the dashboard lighter and much more efficient when typing in the search boxes.
+ */
+const PlatformCard = React.memo(function PlatformCard({ account, isLoading }: PlatformCardProps) {
   const formatNumber = (num: number) => {
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
@@ -37,7 +44,7 @@ export default function PlatformCard({ account, isLoading }: PlatformCardProps) 
     <div className={`platform-card glass ${isLoading ? 'loading' : ''}`}>
       <div className="card-header">
         <div className="user-profile">
-          <img src={account.profilePic} alt={account.displayName} className="profile-img" />
+          <img src={account.profilePic} alt={account.displayName} className="profile-img" loading="lazy" />
           <div className="user-info">
             <h3>{account.displayName}</h3>
             <p className="username">@{account.username}</p>
@@ -67,7 +74,7 @@ export default function PlatformCard({ account, isLoading }: PlatformCardProps) 
             Avg. Views
           </div>
           <div className="stat-value">
-            {formatNumber(account.totalViews / account.latestContent.length)}
+            {formatNumber(account.latestContent.length > 0 ? account.totalViews / account.latestContent.length : 0)}
           </div>
         </div>
       </div>
@@ -77,7 +84,7 @@ export default function PlatformCard({ account, isLoading }: PlatformCardProps) 
         {account.latestContent.map((item) => (
           <div key={item.id} className="content-item">
             <div className="content-thumbnail">
-              <img src={item.thumbnail} alt={item.title || 'Post'} />
+              <img src={item.thumbnail} alt={item.title || 'Post'} loading="lazy" />
               <div className="content-views">
                 <Eye size={10} />
                 {formatNumber(item.views)}
@@ -269,4 +276,6 @@ export default function PlatformCard({ account, isLoading }: PlatformCardProps) 
       `}</style>
     </div>
   );
-}
+});
+
+export default PlatformCard;
